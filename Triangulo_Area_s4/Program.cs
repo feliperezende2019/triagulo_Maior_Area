@@ -10,28 +10,30 @@ namespace Triangulo_Area_s4
             // Formula de Heron areaX = Math.Sqrt(p * (p - x1) * (p - x2) * (p - x3));
 
 
-            // Variaveis
-            double xA, xB, xC, yA, yB, yC;
+            // Variables 
             double areaX, areaY;
+            Triangle x, y;
+            x = new Triangle();
+            y = new Triangle();
 
             // Recebendo dados
             Console.WriteLine("Entre com as medidas do triangulo X:");
-            xA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            xB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            xC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.WriteLine("Entre com as medidas do triangulo Y:");
-            yA = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            yB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            yC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
 
             // Calculando usando a formula
-            double p = (xA + xB + xC) / 2;
-            areaX = Math.Sqrt(p * (p - xA) * (p - xB) * (p - xC));
+            double p = (x.A + x.B + x.C) / 2;
+            areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
 
-            p = (yA + yB + yC) / 2;
-            areaY = Math.Sqrt(p * (p - yA) * (p - yB) * (p - yC));
+            p = (y.A + y.B + y.C) / 2;
+            areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
