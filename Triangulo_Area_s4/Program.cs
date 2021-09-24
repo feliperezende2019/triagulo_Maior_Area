@@ -29,14 +29,12 @@ namespace Triangulo_Area_s4
 
 
             // Calculando usando a formula
-            double p = (x.A + x.B + x.C) / 2;
-            areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
-
-            p = (y.A + y.B + y.C) / 2;
-            areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            areaX = x.Area();
+            areaY = y.Area();
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
+
 
             // Verificando maior área.
             if (areaX > areaY)
